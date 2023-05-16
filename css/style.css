@@ -477,6 +477,31 @@ img {
       align-self: flex-start;
 }
 
+@-webkit-keyframes oculus {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    left: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 101%;
+  }
+}
+
+@keyframes oculus {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    left: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 101%;
+  }
+}
 .oculus {
   position: relative;
   padding-bottom: 109px;
