@@ -505,17 +505,17 @@ body {
 
 ///OCULUS 
 // /// 
-// @keyframes oculus {
-//     0% {
-//         transform: translateX(-100%);
-//         left: 0;
-//     }
+@keyframes oculus {
+    0% {
+        transform: translateX(-100%);
+        left: 0;
+    }
 
-//     100% {
-//         transform: translateX(0);
-//         left: 101%;
-//     }
-// }
+    100% {
+        transform: translateX(0);
+        left: 101%;
+    }
+}
 
 
 
