@@ -15,17 +15,27 @@
     <header class="header">
       <div class="header__container container">
         <nav class="header-footer__nav header__nav">
+          <button class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <ul class="header-footer__menu header__menu">
-            <li class="header-footer__item header__item"><a href="#" class="header__item-link">Shop</a></li>
-            <li class="header-footer__item header__item"><a href="#" class="header__item-link">Games</a></li>
-            <li class="header-footer__item header__item"><a href="#" class="header__item-link">Metaverse</a></li>
+            <div class="header__inner">
+              <li class="header-footer__item header__item"><a href="#" data-scroll="shop"
+                  class="header__item-link">Shop</a></li>
+              <li class="header-footer__item header__item"><a href="#" data-scroll="games"
+                  class="header__item-link">Games</a></li>
+              <li class="header-footer__item header__item"><a href="#" data-scroll="metaverse"
+                  class="header__item-link">Metaverse</a></li>
+            </div>
           </ul>
           <a href="" class="header-footer__logo header__logo">
             <img src="img/logo.svg" alt="logo">
           </a>
           <div class="header-footer__bag header-footer__bag-on">
             <img src="img/bag.svg" alt="bag">
-            <span>1</span>
+            <span>0</span>
           </div>
         </nav>
       </div>
@@ -37,7 +47,7 @@
           <p class="meta__subtitle">Get an Elite Strap free</p>
           <p class="meta__text">For a limited time only, save $59.99 USD. Offer ends 1/19/23</p>
           <button class="meta__button">
-            <div class="meta__buy">BUY NOW</div>
+            <div class="meta__buy" data-bag="true">BUY NOW</div>
             <div class="meta__price">399,99 USD</div>
           </button>
           <p class="meta__text-button">Meta Quest 2 is for ages 13+</p>
@@ -59,7 +69,7 @@
           <p class="tabs__title main-subtitle">Easy to set up and safe to use</p>
           <div class="tabs__items">
             <div class="tabs__tab tab tab-active" data-tab="1">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics</h4>
                 <p class="tab__text">
@@ -75,7 +85,7 @@
               </div>
             </div>
             <div class="tabs__tab tab" data-tab="2">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics 2</h4>
                 <p class="tab__text">
@@ -91,7 +101,7 @@
               </div>
             </div>
             <div class="tabs__tab tab" data-tab="3">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics 3</h4>
                 <p class="tab__text">
@@ -107,7 +117,7 @@
               </div>
             </div>
             <div class="tabs__tab tab" data-tab="4">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics 4</h4>
                 <p class="tab__text">
@@ -123,7 +133,7 @@
               </div>
             </div>
             <div class="tabs__tab tab" data-tab="5">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics 5</h4>
                 <p class="tab__text">
@@ -139,7 +149,7 @@
               </div>
             </div>
             <div class="tabs__tab tab" data-tab="6">
-              <img src="img/tab-1.jpg" alt="tab" class="tab__img">
+              <div class="tab__img"><img src="img/tab-1.jpg" alt="tab"></div>
               <div class="tab__content">
                 <h4 class="tab__title">Graphics 6</h4>
                 <p class="tab__text">
@@ -157,7 +167,7 @@
           </div>
         </div>
       </section>
-      <section class="games">
+      <section class="games" data-scroll-target="games">
         <div class="games__container container">
           <h3 class="games__title main-title">GAMES</h3>
           <div class="games__content">
@@ -167,40 +177,37 @@
                 favourite games and experiences</p>
               <button class="games__button">SEE ALL GAMES</button>
             </div>
-            <div class="games__columns">
-              <div class="games__column game-column">
-                <img src="img/game-1.jpg" alt="#">
-                <h4>Blade & Sorcery: Nomad</h4>
-                <p>Step into a medieval fantasy sandbox that uses phisics to serve up some of the most realistic combat
-                  in VR</p>
-                <button>see more</button>
-              </div>
-              <div class="games__column game-column">
-                <img src="img/game-2.jpg" alt="#">
-                <h4>Population: One</h4>
-                <p>Climb anything. Fight everywhere. Experience battle royale only possible in VR
-                </p>
-                <button>see more</button>
-              </div>
-              <div class="games__column game-column">
-                <img src="img/game-3.jpg" alt="#">
-                <h4>Supernatural</h4>
-                <p>Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world.
-                  Enjoy new workouts every day.</p>
-                <button>see more</button>
-              </div>
+            <div class="games__column game-column">
+              <img src="img/game-1.jpg" alt="#">
+              <h4>Blade & Sorcery: Nomad</h4>
+              <p>Step into a medieval fantasy sandbox that uses phisics to serve up some of the most realistic combat
+                in VR</p>
+              <button>see more</button>
+            </div>
+            <div class="games__column game-column">
+              <img src="img/game-2.jpg" alt="#">
+              <h4>Population: One</h4>
+              <p>Climb anything. Fight everywhere. Experience battle royale only possible in VR
+              </p>
+              <button>see more</button>
+            </div>
+            <div class="games__column game-column">
+              <img src="img/game-3.jpg" alt="#">
+              <h4>Supernatural</h4>
+              <p>Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world.
+                Enjoy new workouts every day.</p>
+              <button>see more</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="oculus">
-        <p class="oculus__marquee">
+      <section class="oculus" data-scroll-target="shop">
         <p class="oculus__title"> Oculus</p>
         </p>
-        <div class="oculus__content">
+        <div class="oculus__content .container">
           <img src="img/oculus.png" alt="oculus">
           <button class="meta__button">
-            <div class="meta__buy">BUY NOW</div>
+            <div class="meta__buy" data-bag="true">BUY NOW</div>
             <div class="meta__price">399,99 USD</div>
           </button>
           <p class="meta__text-button">Meta Quest 2 is for ages 13+</p>
@@ -232,9 +239,11 @@
           </div>
         </div>
       </section>
-      <section class="metaverse">
-        <div class="metaverse__container container">
-          <button>Go</button>
+      <section class="metaverse" data-scroll-target="metaverse">
+        <div class="container">
+          <div class="metaverse__container">
+            <button>Go</button>
+          </div>
         </div>
       </section>
       <section class="accessories">
@@ -247,28 +256,28 @@
               <p>Meta Quest 2 Carrying Case</p>
               <p class="accessories__text">Protect your system–at home or away.</p>
               <p class="accessories__price">$59.99 USD</p>
-              <button>Buy now</button>
+              <button data-bag="true">Buy now</button>
             </div>
             <div class="accessories__item">
               <img src="img/acc-2.jpg" alt="">
               <p>Link Cable</p>
               <p class="accessories__text">Harness the power of your PC with this premium fiber-optic cable.</p>
               <p class="accessories__price">$79.99 USD</p>
-              <button>Buy now</button>
+              <button data-bag="true">Buy now</button>
             </div>
             <div class="accessories__item">
               <img src="img/acc-3.jpg" alt="">
               <p>Meta Quest 2 Active Pack</p>
               <p class="accessories__text">A wipeable facial interface, wrist straps, and knuckle straps.</p>
               <p class="accessories__price">$69.99 USD</p>
-              <button>Buy now</button>
+              <button data-bag="true">Buy now</button>
             </div>
             <div class="accessories__item">
               <img src="img/acc-4.jpg" alt="">
               <p>Meta Quest Gift Cards</p>
               <p class="accessories__text">Redeemable on 350+ games and apps.</p>
               <p class="accessories__price">$15-50 USD</p>
-              <button>Buy now</button>
+              <button data-bag="true">Buy now</button>
             </div>
           </div>
         </div>
@@ -306,11 +315,11 @@
             <img src="img/logo.svg" alt="logo">
           </a>
           <div class="footer__socials">
-            <a href="#"><img src="img/yt.svg" alt="youtube"></a>
+            <a href="instagram.com"><img src="img/yt.svg" alt="youtube"></a>
 
-            <a href="#"><img src="img/fb.svg" alt="facebook"></a>
+            <a href="facebook.com"><img src="img/fb.svg" alt="facebook"></a>
 
-            <a href="#"><img src="img/insta.svg" alt="instagram"></a>
+            <a href="youtube.com"><img src="img/insta.svg" alt="instagram"></a>
           </div>
         </nav>
       </div>
