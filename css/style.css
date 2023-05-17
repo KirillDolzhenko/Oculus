@@ -157,7 +157,7 @@ body {
           align-items: center;
   width: 15px;
   height: 15px;
-  border-radius: 50%;
+  border-radius: 7px;
   font-size: 10px;
   color: white;
   background-color: black;
@@ -209,6 +209,14 @@ body {
   background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%);
   padding: 1px;
 }
+.meta__button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af00ca), to(rgba(68, 0, 216, 0.93)));
+  background: linear-gradient(180deg, #af00ca 0%, rgba(68, 0, 216, 0.93) 100%);
+}
+.meta__button:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e227ff), to(rgba(103, 32, 255, 0.93)));
+  background: linear-gradient(180deg, #e227ff 0%, rgba(103, 32, 255, 0.93) 100%);
+}
 .meta__buy, .meta__price {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -232,6 +240,12 @@ body {
 }
 .meta__price {
   background-color: #ececec;
+}
+.meta__price:hover {
+  background-color: #e9e9e9;
+}
+.meta__price:active {
+  background-color: #d4d4d4;
 }
 .meta__text-button {
   font-size: 13px;
@@ -459,6 +473,9 @@ body {
 .games__button:hover::before {
   opacity: 0.1;
 }
+.games__button:active::before {
+  opacity: 0.3;
+}
 .games__button::before {
   content: "";
   position: absolute;
@@ -468,7 +485,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(182, 128, 183);
+  background-color: rgb(216, 119, 218);
   opacity: 0;
 }
 .games__columns {
@@ -510,6 +527,7 @@ body {
           flex: 1 1 auto;
 }
 .games__column button {
+  position: relative;
   margin-top: 40px;
   font-size: 16px;
   line-height: 1.125;
@@ -520,7 +538,47 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
+.games__column button:hover {
+  text-decoration: underline;
+}
+.games__column button:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(80, 0, 250, 0.93);
+}
+.games__column button:active {
+  font-weight: 700;
+}
 
+@-webkit-keyframes oculus {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    left: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 101%;
+  }
+}
+
+@keyframes oculus {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    left: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    left: 101%;
+  }
+}
 .oculus {
   position: relative;
   padding-bottom: 109px;
@@ -529,6 +587,12 @@ body {
 }
 .oculus .meta__price {
   background-color: #ffffff;
+}
+.oculus .meta__price:hover {
+  background-color: #e9e9e9;
+}
+.oculus .meta__price:active {
+  background-color: #d4d4d4;
 }
 .oculus__title {
   position: absolute;
@@ -667,8 +731,13 @@ body {
   cursor: pointer;
 }
 .metaverse__container button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a800c2), to(rgba(60, 0, 190, 0.93)));
+  background: linear-gradient(180deg, #a800c2 0%, rgba(60, 0, 190, 0.93) 100%);
+}
+.metaverse__container button:active {
   background: -webkit-gradient(linear, left top, left bottom, from(#de1afc), to(rgba(93, 18, 255, 0.93)));
   background: linear-gradient(180deg, #de1afc 0%, rgba(93, 18, 255, 0.93) 100%);
+  border: 1px solid white;
 }
 
 .accessories {
@@ -713,6 +782,7 @@ body {
   min-height: 60px;
 }
 .accessories__item button {
+  position: relative;
   width: 100%;
   padding: 6px 0;
   font-weight: 700;
@@ -726,6 +796,20 @@ body {
   -o-border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%) 1;
      border-image: -webkit-gradient(linear, left top, left bottom, from(#BC10D8), to(rgba(80, 0, 250, 0.93))) 1;
      border-image: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%) 1;
+  cursor: pointer;
+}
+.accessories__item button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.accessories__item button span:hover {
+  background-color: rgba(216, 119, 218, 0.1);
+}
+.accessories__item button span:active {
+  background-color: rgba(216, 119, 218, 0.3);
 }
 .accessories__text {
   -webkit-box-flex: 1;
@@ -771,9 +855,9 @@ body {
   border-bottom: 1px solid #CACAD6;
   padding: 0 70px 0 10px;
 }
-.form__column:first-child form input:focus-visible {
-  border: none;
-  border-bottom: 1px solid #CACAD6;
+.form__column:first-child form input:focus {
+  border: 1px solid #CACAD6;
+  border-radius: 0 25px 0 0;
 }
 .form__column:first-child form button {
   position: absolute;
@@ -787,6 +871,13 @@ body {
   color: #5C5C5E;
   border-radius: 50%;
   background: #CACAD6;
+}
+.form__column:first-child form button:hover {
+  background: #b1b1b1;
+}
+.form__column:first-child form button:active {
+  background: #ececec;
+  border: 1px solid #CACAD6;
 }
 .form__column:first-child p:last-child {
   margin-top: 10px;
@@ -834,6 +925,14 @@ body {
           justify-content: end;
   gap: 20px;
 }
+.footer__socials img:hover {
+  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+.footer__socials img:active {
+  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+}
 
 @media (max-width: 1080px) {
   .footer__menu {
@@ -861,10 +960,10 @@ body {
     background-color: #070707;
     height: auto;
     width: auto;
-    -webkit-transition: -webkit-transform 1s ease;
-    transition: -webkit-transform 1s ease;
-    transition: transform 1s ease;
-    transition: transform 1s ease, -webkit-transform 1s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
     padding: 10px 0;
   }
   .header__item {
